@@ -7,7 +7,6 @@
 
 import Foundation
 import SwiftUI
-import SwiftfulRecursiveUI
 
 struct AnyModalWithDestination: Identifiable, Equatable {
     let id: String

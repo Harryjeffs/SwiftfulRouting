@@ -7,7 +7,6 @@
 
 import Foundation
 import SwiftUI
-import SwiftfulRecursiveUI
 
 struct AnyTransitionWithDestination: Identifiable, Equatable {
     let id: String
