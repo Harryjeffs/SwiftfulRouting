@@ -119,13 +119,6 @@ struct SwipeBackSupportContainer<Content:View>: View {
     
 }
 
-#Preview {
-    SwipeBackSupportContainer(insertionTransition: .leadingCover) {
-        Rectangle()
-            .fill(Color.black)
-    }
-}
-
 private struct DragGestureViewModifier: ViewModifier {
     
     @State private var offset: CGSize = .zero

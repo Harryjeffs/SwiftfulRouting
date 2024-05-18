@@ -190,30 +190,6 @@ public struct TransitionSupportViewBuilder<Content: View>: View, TransitionSuppo
 //    }
 }
 
-#Preview {
-    RouterView { router in
-        TransitionSupportViewBuilder(router: router, allowSimultaneous: true) { subRouter in
-            Rectangle()
-                .fill(Color.pink)
-                .onTapGesture {
-                    let bool = Int.random(in: 0..<4) == 1
-                    
-                    if bool {
-                        subRouter.dismissTransition()
-                    } else {
-                        subRouter.showTransition(transition: .trailingCover, destination: { _ in
-                            Rectangle()
-                                .fill(Color.blue)
-                                .onTapGesture {
-                                    subRouter.dismissTransition()
-                                }
-                        })
-                    }
-                }
-        }
-    }
-}
-
 struct CustomRemovalTransition: ViewModifier {
     let option: TransitionOption?
     @State private var frame: CGRect = .zero
